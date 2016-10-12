@@ -1,0 +1,14 @@
+>Projeto04
+  >web pages
+    >webinf
+      >jspf
+        header.jspf
+        footer.jspf
+    Clientes.jsp
+    Fornecedores.jsp
+    Home.jsp
+  >code pages
+    >br.com.fatecpg
+      Cliente.java
+      Fornecedor.java
+      Database.java
