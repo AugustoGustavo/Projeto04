@@ -35,7 +35,7 @@
     </head>
     <body>
         <h1>Fornecedores</h1>
-        <div style="display: inline">
+        <div>
             <div>
                 <fieldset>
                     <form>

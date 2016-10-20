@@ -71,9 +71,9 @@
                         <td><%=c.getNome() %></td>
                         <td><%=c.getCpf() %></td>
                         <td><%=c.getRg() %></td>
-                        <td><%=c. getEmail() %></td>
+                        <td><%=c.getEmail() %></td>
                         <td><%=c.getTelefone() %></td>
-                        <td><%=c.getEndereço() %></td>
+                        <td><%=c.getEndereço() %></td>   
                         <td>
                             <form>
                                 <input type="hidden" name="ec" value="<%=lista_cliente.indexOf(c) %>">
