@@ -79,11 +79,17 @@
                                 <input type="hidden" name="ec" value="<%=lista_cliente.indexOf(c) %>">
                                 <input type="submit" name="excluir_cliente" value="excluir">
                             </form>
+                            <section>
+                                <form action="Alterar.jsp">
+                                    <input type="hidden" name="ac" value="<%=lista_cliente.indexOf(c) %>">
+                                    <input type="submit" name="alterar_cliente" value="alterar">
+                                </form>
+                            </section>
                         </td>
                     </tr>
                     <%}%>
                 </table>
-            </div>
+            </div>                
         </div>
     </body>
 </html>
