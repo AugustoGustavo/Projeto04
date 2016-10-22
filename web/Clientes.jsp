@@ -29,6 +29,31 @@
             response.sendRedirect(request.getRequestURI());
         }
 %>
+<%
+            if (request.getParameter("salvar_cliente")!=null) {
+                String indice = request.getParameter("ac");
+                int indice_cliente = Integer.parseInt(indice);
+                if (request.getParameter("nome_alterado")!=null){
+                    lista_cliente.get(indice_cliente).setNome(request.getParameter("nome_alterado"));
+                }
+                if (request.getParameter("cpf_alterado")!=null){
+                    lista_cliente.get(indice_cliente).setCpf(request.getParameter("cpf_alterado"));
+                }
+                if (request.getParameter("rg_alterado")!=null){
+                    lista_cliente.get(indice_cliente).setRg(request.getParameter("rg_alterado"));
+                }
+                if (request.getParameter("email_alterado")!=null){
+                    lista_cliente.get(indice_cliente).setEmail(request.getParameter("email_alterado"));
+                }
+                if (request.getParameter("telefone_alterado")!=null){
+                    lista_cliente.get(indice_cliente).setTelefone(request.getParameter("telefone_alterado"));
+                }
+                if (request.getParameter("end_alterado")!=null){
+                    lista_cliente.get(indice_cliente).setEndereço(request.getParameter("end_alterado"));
+                }
+                response.sendRedirect(request.getRequestURI());
+            }
+%>
     
 <html>
     
@@ -67,25 +92,23 @@
                     </tr>
                     <%for (Cliente c: lista_cliente) {%>
                     <tr>
-                        <%lista_cliente.indexOf(c);%>
-                        <td><%=c.getNome() %></td>
-                        <td><%=c.getCpf() %></td>
-                        <td><%=c.getRg() %></td>
-                        <td><%=c.getEmail() %></td>
-                        <td><%=c.getTelefone() %></td>
-                        <td><%=c.getEndereço() %></td>   
-                        <td>
+                        <section>
                             <form>
-                                <input type="hidden" name="ec" value="<%=lista_cliente.indexOf(c) %>">
-                                <input type="submit" name="excluir_cliente" value="excluir">
-                            </form>
-                            <section>
-                                <form action="Alterar.jsp">
+                                <%lista_cliente.indexOf(c);%>
+                                <td><input type="text" name="nome_alterado" value="<%=c.getNome() %>"></td>
+                                <td><input type="text" name="cpf_alterado" value="<%=c.getCpf() %>"></td>
+                                <td><input type="text" name="rg_alterado" value="<%=c.getRg() %>"></td>
+                                <td><input type="text" name="email_alterado" value="<%=c.getEmail() %>"></td>
+                                <td><input type="text" name="telefone_alterado" value="<%=c.getTelefone() %>"></td>
+                                <td><input type="text" name="end_alterado" value="<%=c.getEndereço() %>"></td>
+                                <td>
                                     <input type="hidden" name="ac" value="<%=lista_cliente.indexOf(c) %>">
-                                    <input type="submit" name="alterar_cliente" value="alterar">
-                                </form>
-                            </section>
-                        </td>
+                                    <input type="submit" name="salvar_cliente" value="salvar">
+                                    <input type="hidden" name="ec" value="<%=lista_cliente.indexOf(c) %>">
+                                    <input type="submit" name="excluir_cliente" value="excluir">
+                                </td>
+                            </form>
+                        </section>
                     </tr>
                     <%}%>
                 </table>
