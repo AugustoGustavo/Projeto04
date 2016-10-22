@@ -17,24 +17,29 @@
 <%
             if (request.getParameter("salvar_cliente")!=null) {
                 if (request.getParameter("nome_alterado")!=null){
-                    lista_cliente.get(indice_cliente).setNome(request.getParameter("nome_alterado"));
+                    String nome = request.getParameter("nome_alterado");
+                    lista_cliente.get(indice_cliente).setNome(nome);
                 }
                 if (request.getParameter("cpf_alterado")!=null){
-                    lista_cliente.get(indice_cliente).setNome(request.getParameter("cpf_alterado"));
+                    String cpf = request.getParameter("cpf_alterado");
+                    lista_cliente.get(indice_cliente).setCpf(request.getParameter(cpf));
                 }
                 if (request.getParameter("rg_alterado")!=null){
-                    lista_cliente.get(indice_cliente).setNome(request.getParameter("rg_alterado"));
+                    String rg = request.getParameter("rg_alterado");
+                    lista_cliente.get(indice_cliente).setRg(rg);
                 }
                 if (request.getParameter("email_alterado")!=null){
-                    lista_cliente.get(indice_cliente).setNome(request.getParameter("email_alterado"));
+                    String email = request.getParameter("email_alterado");
+                    lista_cliente.get(indice_cliente).setEmail(email);
                 }
                 if (request.getParameter("telefone_alterado")!=null){
-                    lista_cliente.get(indice_cliente).setNome(request.getParameter("telefone_alterado"));
+                    String telefone = request.getParameter("telefone_alterado");
+                    lista_cliente.get(indice_cliente).setTelefone(telefone);
                 }
                 if (request.getParameter("end_alterado")!=null){
-                    lista_cliente.get(indice_cliente).setNome(request.getParameter("end_alterado"));
+                    String endereço = request.getParameter("end_alterado");
+                    lista_cliente.get(indice_cliente).setEndereço(endereço);
                 }
-                response.sendRedirect("../Clientes.jsp");
             }
 %>
 <html>
@@ -48,7 +53,7 @@
         <form>
             <table border="1">
                 <tr>
-                    <th colspan="2">Salvo</th>
+                    <th colspan="2">Dados</th>
                     <th colspan="2">Alterar</th>
                 </tr> 
                 <tr>
