@@ -1,4 +1,4 @@
 # Projeto04
-Projeto Acadêmia de Programação Orientada a Objetos.
+Projeto Acadêmico de Programação Orientada a Objetos.
 
 >Centro Estadual de Educação Tecnológica de São Paulo
