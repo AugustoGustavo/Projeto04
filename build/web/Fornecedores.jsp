@@ -21,33 +21,60 @@
             lista_fornecedor.add(f);
             response.sendRedirect(request.getRequestURI());
     }
-    if(request.getParameter("excluir")!=null){
+    if(request.getParameter("excluir_fornecedor")!=null){
         String indice = request.getParameter("if");
         int indice_fornecedor = Integer.parseInt(indice);
         lista_fornecedor.remove(indice_fornecedor);
         response.sendRedirect(request.getRequestURI());
     }
 %>
+<%
+            if (request.getParameter("salvar_fornecedor")!=null) {
+                String indice = request.getParameter("af");
+                int indice_fornecedor = Integer.parseInt(indice);
+                if (request.getParameter("nome_alterado")!=null){
+                    lista_fornecedor.get(indice_fornecedor).setNome(request.getParameter("nome_alterado"));
+                }
+                if (request.getParameter("razao_social_alterado")!=null){
+                    lista_fornecedor.get(indice_fornecedor).setRazao_social(request.getParameter("razao_social_alterado"));
+                }
+                if (request.getParameter("cnpj_alterado")!=null){
+                    lista_fornecedor.get(indice_fornecedor).setCnpj(request.getParameter("cnpj_alterado"));
+                }
+                if (request.getParameter("email_alterado")!=null){
+                    lista_fornecedor.get(indice_fornecedor).setEmail(request.getParameter("email_alterado"));
+                }
+                if (request.getParameter("telefone_alterado")!=null){
+                    lista_fornecedor.get(indice_fornecedor).setTelefone(request.getParameter("telefone_alterado"));
+                }
+                if (request.getParameter("end_alterado")!=null){
+                    lista_fornecedor.get(indice_fornecedor).setEndereço(request.getParameter("end_alterado"));
+                }
+                response.sendRedirect(request.getRequestURI());
+            }
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Projeto 04: Fornecedores</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Fornecedores</h1>
-        <div>
-            <div>
+        <div class="navbar navba-inverse">
+            <div class="navbar-static-top">
                 <fieldset>
-                    <form>
-                    Nome:<input type="text" name="nome_fornecedor">
-                    Razão Social:<input type="text" name="razaosocial_fornecedor">
-                    CNPJ:<input type="text" name="cnpj_fornecedor">
-                    E-Mail:<input type="text" name="email_fornecedor">
-                    Telefone:<input type="text" name="telefone_fornecedor">
-                    Endereço:<input type="text" name="end_fornecedor">
-                    <input type="submit" name="incluir_fornecedor" value="enviar">
+                    <form class="form-inline">
+                        Nome: <input type="text" class="input-sm" name="nome_fornecedor"></br>
+                        Razão Social: <input type="text" class="input-sm" name="razaosocial_fornecedor"><br/>
+                        CNPJ: <input type="text" class="input-sm" name="cnpj_fornecedor"></br>
+                        E-Mail: <input type="text" class="input-sm" name="email_fornecedor"></br>
+                        Telefone: <input type="text" class="input-sm" name="telefone_fornecedor"></br>
+                        Endereço: <input type="text" class="input-sm" name="end_fornecedor"></br>
+                    <input type="submit" class="btn" name="incluir_fornecedor" value="enviar">
                     </form>
-                </fieldset>
+                    <fieldset/>
             </div>
             <div>
                 <h2>Lista:</h2></br>
@@ -62,24 +89,29 @@
                     </tr>
                     <%for (Fornecedor f: lista_fornecedor) {%>
                     <tr>
-                        <%lista_fornecedor.indexOf(f);%>
-                        <td><%=f.getNome() %></td>
-                        <td><%=f.getRazao_social() %></td>
-                        <td><%=f.getCnpj() %></td>
-                        <td><%=f.getEmail() %></td>
-                        <td><%=f.getTelefone() %></td>
-                        <td><%=f.getEndereço()%></td>
-                        <td>
+                        <section>
                             <form>
-                                <input type="hidden" name="if" value="<%=lista_fornecedor.indexOf(f) %>">
-                                <input type="submit" name="excluir_fornecedor" value="excluir">
+                                <%lista_fornecedor.indexOf(f);%>
+                                <td><input type="text" name="nome_alterado" value="<%=f.getNome() %>"></td>
+                                <td><input type="text" name="razao_social_alterado" value="<%=f.getRazao_social() %>"></td>
+                                <td><input type="text" name="cnpj_alterado" value="<%=f.getCnpj() %>"></td>
+                                <td><input type="text" name="email_alterado" value="<%=f.getEmail() %>"></td>
+                                <td><input type="text" name="telefone_alterado" value="<%=f.getTelefone() %>"></td>
+                                <td><input type="text" name="end_alterado" value="<%=f.getEndereço() %>"></td>
+                                <td>
+                                    <input type="hidden" name="af" value="<%=lista_fornecedor.indexOf(f) %>">
+                                    <input type="submit" name="salvar_fornecedor" value="salvar">
+                                    <input type="hidden" name="if" value="<%=lista_fornecedor.indexOf(f) %>">
+                                    <input type="submit" name="excluir_fornecedor" value="excluir">
+                                </td>
                             </form>
-                        </td>
+                        </section>
                     </tr>
                     <%}%>
                 </table>
             </div>
         </div>
-        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>   
     </body>
 </html>

@@ -11,6 +11,11 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants.add("/WEB-INF/jspf/header.jspf");
+  }
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
@@ -49,11 +54,16 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Projeto 04: Home</title>\n");
+      out.write("        <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>Home</h1>\n");
-      out.write("        <a href=\"Clientes.jsp\">Clientes</a>\n");
-      out.write("        <a href=\"Fornecedores.jsp\">Fornecedores</a>\n");
+      out.write("        ");
+      out.write("<ul>\n");
+      out.write("    <li><a href=\"Home.jsp\">Home</a></li>\n");
+      out.write("    <li><a href=\"Clientes.jsp\">Clientes</a></li>\n");
+      out.write("    <li><a href=\"Fornecedores.jsp\">Fornecedores</a></li>\n");
+      out.write("</ul>\n");
+      out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

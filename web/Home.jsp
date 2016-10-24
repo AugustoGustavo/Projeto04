@@ -10,10 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Projeto 04: Home</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Home</h1>
-        <a href="Clientes.jsp">Clientes</a>
-        <a href="Fornecedores.jsp">Fornecedores</a>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
     </body>
 </html>

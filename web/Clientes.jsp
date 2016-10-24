@@ -60,9 +60,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Projeto 04: Clientes</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        
+        <%@include file="WEB-INF/jspf/header.jspf" %>
         <h1>Clientes</h1>
         <div>
             <div>
