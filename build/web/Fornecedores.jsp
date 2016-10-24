@@ -66,13 +66,13 @@
             <div class="navbar-static-top">
                 <fieldset>
                     <form class="form-inline">
-                        Nome: <input type="text" class="input-sm" name="nome_fornecedor"></br>
-                        Razão Social: <input type="text" class="input-sm" name="razaosocial_fornecedor"><br/>
-                        CNPJ: <input type="text" class="input-sm" name="cnpj_fornecedor"></br>
-                        E-Mail: <input type="text" class="input-sm" name="email_fornecedor"></br>
-                        Telefone: <input type="text" class="input-sm" name="telefone_fornecedor"></br>
-                        Endereço: <input type="text" class="input-sm" name="end_fornecedor"></br>
-                    <input type="submit" class="btn" name="incluir_fornecedor" value="enviar">
+                        Nome:</br><input type="text" class="input-sm" name="nome_fornecedor"></br>
+                        Razão Social:</br> <input type="text" class="input-sm" name="razaosocial_fornecedor"><br/>
+                        CNPJ:</br> <input type="text" class="input-sm" name="cnpj_fornecedor"></br>
+                        E-Mail:</br><input type="text" class="input-sm" name="email_fornecedor"></br>
+                        Telefone:</br><input type="text" class="input-sm" name="telefone_fornecedor"></br>
+                        Endereço:</br><input type="text" class="input-sm" name="end_fornecedor"></br>
+                        </br><input type="submit" class="btn btn-default" name="incluir_fornecedor" value="enviar">
                     </form>
                     <fieldset/>
             </div>
