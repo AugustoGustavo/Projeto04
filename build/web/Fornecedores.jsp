@@ -58,12 +58,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Projeto 04: Fornecedores</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
-        <h1>Fornecedores</h1>
-        <div class="navbar navba-inverse">
-            <div class="navbar-static-top">
+        <h1 align="center">Fornecedores</h1>
+        </br>
+        <div class="row">
+            <div class="span12" style="text-align: center; margin: 0 auto;">
                 <fieldset>
                     <form class="form-inline">
                         Nome:</br><input type="text" class="input-sm" name="nome_fornecedor"></br>
@@ -74,11 +76,10 @@
                         Endereço:</br><input type="text" class="input-sm" name="end_fornecedor"></br>
                         </br><input type="submit" class="btn btn-default" name="incluir_fornecedor" value="enviar">
                     </form>
-                    <fieldset/>
-            </div>
-            <div>
-                <h2>Lista:</h2></br>
-                <table border="1">
+                <fieldset/>
+                </br>
+                <h2 align="center">Lista:</h2></br>
+                <table border="1" class="table-condensed" align="center">
                     <tr>
                         <th>Nome</th>
                         <th>Razão Social</th>
@@ -86,11 +87,11 @@
                         <th>E-Mail</th>
                         <th>Telefone</th>
                         <th>Endereço</th>
+                        <th>Opções</th>
                     </tr>
                     <%for (Fornecedor f: lista_fornecedor) {%>
                     <tr>
-                        <section>
-                            <form>
+                        <form>
                                 <%lista_fornecedor.indexOf(f);%>
                                 <td><input type="text" name="nome_alterado" value="<%=f.getNome() %>"></td>
                                 <td><input type="text" name="razao_social_alterado" value="<%=f.getRazao_social() %>"></td>
@@ -100,12 +101,11 @@
                                 <td><input type="text" name="end_alterado" value="<%=f.getEndereço() %>"></td>
                                 <td>
                                     <input type="hidden" name="af" value="<%=lista_fornecedor.indexOf(f) %>">
-                                    <input type="submit" name="salvar_fornecedor" value="salvar">
+                                    <input type="submit" class="btn btn-default" name="salvar_fornecedor" value="salvar">
                                     <input type="hidden" name="if" value="<%=lista_fornecedor.indexOf(f) %>">
-                                    <input type="submit" name="excluir_fornecedor" value="excluir">
-                                </td>
-                            </form>
-                        </section>
+                                    <input type="submit" class="btn btn-default" name="excluir_fornecedor" value="excluir">
+                                </td
+                        </form>
                     </tr>
                     <%}%>
                 </table>
