@@ -3,9 +3,14 @@ background-image: URL(.../images/background.jpg);
 background-repeat: no-repeat;
 background-size: 100% 100%;
 height: auto;
-color: white
+color: white;
+background-attachment: fixed;
 }
 
 input{
     color: black
+}
+
+.corpo{
+    margin: 700px;
 }
