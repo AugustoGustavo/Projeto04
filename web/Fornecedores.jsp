@@ -104,7 +104,7 @@
                                     <input type="submit" class="btn btn-default" name="salvar_fornecedor" value="salvar">
                                     <input type="hidden" name="if" value="<%=lista_fornecedor.indexOf(f) %>">
                                     <input type="submit" class="btn btn-default" name="excluir_fornecedor" value="excluir">
-                                </td
+                                </td>
                         </form>
                     </tr>
                     <%}%>
