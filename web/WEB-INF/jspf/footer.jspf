@@ -1,3 +1,5 @@
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
-<h2>Hello World!</h2>
+<div class="row">
+    <div style="text-align: center; background-color: #080808" class="col-lg-12">
+        <p>Desenvolvido por FATEC-PG</p>
+    </div>
+</div>

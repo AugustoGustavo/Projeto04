@@ -15,6 +15,7 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
+        <h1 align="center">Equipe</h1>
         <div style="text-align: center; vertical-align: central">
         <div class="image">
             <a href="https://fb.com/guustavoaugusto"><img class="img-circle" src="images/gustavo.jpg" alt="Gustavo Augusto"></a>
@@ -37,5 +38,6 @@
             Pedro Henrique - Web Developer.</br>
         </div>
         </div>
+        <%@include file="WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>
