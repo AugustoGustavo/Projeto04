@@ -1,6 +1,6 @@
 <%-- 
     Document   : Home
-    Created on : 06/10/2016, 20:18:19
+    Created on : 06/10/2016, 23:54:00
     Author     : Gustavo
 --%>
 
@@ -15,5 +15,27 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf" %>
+        <div style="text-align: center; vertical-align: central">
+        <div class="image">
+            <a href="https://fb.com/guustavoaugusto"><img class="img-circle" src="images/gustavo.jpg" alt="Gustavo Augusto"></a>
+            Gustavo Augusto - Web Developer.         
+        </div>
+        <div class="image">
+            <a href="https://www.facebook.com/luishfranca?fref=ts"><img class="img-circle" src="images/luis.jpg" alt="Luis Henrique"></a>
+            Luis Henrique - Web Developer.
+        </div>
+        <div class="image">
+            <a href="https://www.facebook.com/renan.rosas?fref=ts"><img class="img-circle" src="images/renan.jpg" alt="Renan Ramalho"></a>
+            Renan Ramalho - Web Developer.</br>
+        </div>
+        <div class="image">
+            <a href="https://www.facebook.com/martaj0rge?fref=ts"><img class="img-circle" src="images/marta.jpg" alt="Marta Jorge"></a>
+            Marta Jorge - Web Developer.</br>
+        </div>
+        <div class="image">
+            <a href="https://www.facebook.com/pedrohenrique.gomesvilaverde?fref=ts"><img class="img-circle" src="images/josh.jpg" alt="Pedro Henrique"></a>
+            Pedro Henrique - Web Developer.</br>
+        </div>
+        </div>
     </body>
 </html>
