@@ -5,6 +5,8 @@ background-size: 100% 100%;
 height: auto;
 color: white;
 background-attachment: fixed;
+overflow-x: hidden;
+position: relative;
 }
 
 input{
