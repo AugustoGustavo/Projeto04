@@ -1,7 +1,7 @@
 <%-- 
     Document   : Clientes
     Created on : 06/10/2016, 20:18:30
-    Author     : Gustavo
+    Author     : Gustavo Jesus
 --%>
 
 <%@page import="br.com.fatecpg.Database"%>
